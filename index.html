@@ -7,7 +7,7 @@
     
     <!-- SEO & Social Meta Tags -->
     <meta name="description" content="Ресторан высокой кухни SHARQ: изысканные блюда, авторские рецепты, уютная атмосфера и безупречный сервис.">
-    <meta name="keywords" content="ресторан, премиум ресторан, забронировать столик, авторская кухня, шашлык, десерты, фергана">
+    <meta name="keywords" content="ресторан, премиум ресторан, забронировать столик, авторская кухня, плов, лагман, фергана">
     <meta property="og:title" content="SHARQ — Премиальный ресторан">
     <meta property="og:description" content="Откройте для себя мир высокой кухни и безупречного сервиса в ресторане SHARQ.">
     <meta property="og:type" content="website">
@@ -638,7 +638,7 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 30px;
         }
 
@@ -1234,16 +1234,6 @@
                     <h3 class="feature-title" data-i18n="why_4_title">Парковка & Valet</h3>
                     <p class="feature-desc" data-i18n="why_4_desc">Удобная охраняемая автостоянка с сервисом парковки персоналом.</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-child"></i></div>
-                    <h3 class="feature-title" data-i18n="why_5_title">Детская комната</h3>
-                    <p class="feature-desc" data-i18n="why_5_desc">Безопасная детская зона с аниматорами для самых маленьких гостей.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-music"></i></div>
-                    <h3 class="feature-title" data-i18n="why_6_title">Живая музыка</h3>
-                    <p class="feature-desc" data-i18n="why_6_desc">Каждый вечер атмосферу дополняют профессиональные музыканты и вокалисты.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -1468,10 +1458,6 @@
                 why_3_desc: "Высокоскоростной интернет на всей территории для комфорта наших гостей.",
                 why_4_title: "Парковка & Valet",
                 why_4_desc: "Удобная охраняемая автостоянка с сервисом парковки персоналом.",
-                why_5_title: "Детская комната",
-                why_5_desc: "Безопасная детская зона с аниматорами для самых маленьких гостей.",
-                why_6_title: "Живая музыка",
-                why_6_desc: "Каждый вечер атмосферу дополняют профессиональные музыканты и вокалисты.",
                 reviews_subtitle: "Слова благодарности",
                 reviews_title: "Отзывы Посетителей",
                 book_subtitle: "Заблаговременный бронь",
@@ -1545,10 +1531,6 @@
                 why_3_desc: "Mehmonlarimiz qulayligi uchun barcha hududda yuqori tezlikdagi internet.",
                 why_4_title: "Avtoturargoh & Valet",
                 why_4_desc: "Qo'riqlanadigan qulay avtoturargoh va avtomobil qo'yish xizmati.",
-                why_5_title: "Bolalar xonasi",
-                why_5_desc: "Kichik mehmonlarimiz uchun animatolar bilan xavfsiz o'yin zonasi.",
-                why_6_title: "Jonli muzyka",
-                why_6_desc: "Har oqshom professional sozandalar va xonandalar jozibali muhit ulashadi.",
                 reviews_subtitle: "Minnatdorchilik so'zlari",
                 reviews_title: "Mijozlarimiz Fikrlari",
                 book_subtitle: "Oldindan joy band qilish",
@@ -1580,8 +1562,18 @@
 
         // === DATA: DISHES & MENU ===
         const dishesData = [
+            // ПОПУЛЯРНЫЕ И ГОРЯЧИЕ БЛЮДА
             {
                 id: 1,
+                category: 'mains',
+                popular: true,
+                price: '65,000 UZS',
+                img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Плов Ферганский', uz: 'Farg\'ona Oshi' },
+                desc: { ru: 'Традиционный ферганский плов из девзиры с отборной бараниной и специями.', uz: 'Tanlangan qo\'y go\'shti va devzira guruchidan tayyorlangan an\'anaviy palov.' }
+            },
+            {
+                id: 2,
                 category: 'mains',
                 popular: true,
                 price: '180,000 UZS',
@@ -1590,7 +1582,26 @@
                 desc: { ru: 'Мраморная говядина зернового откорма с соусом демиглас и печеным чесноком.', uz: 'Marmar mol go\'shti, demiglas sousi va pishirilgan sarimsoq bilan.' }
             },
             {
-                id: 2,
+                id: 3,
+                category: 'mains',
+                popular: true,
+                price: '58,000 UZS',
+                img: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Жареный Лагман', uz: 'Qovurma Lag\'mon' },
+                desc: { ru: 'Тянутая вручную длинная лапша, обжаренная с телятиной, овощами и восточными специями.', uz: 'Buzoq go\'shti va sabzavotlar bilan qovurilgan qo\'lda cho\'zilgan uzun lag\'mon.' }
+            },
+            {
+                id: 4,
+                category: 'mains',
+                popular: true,
+                price: '50,000 UZS',
+                img: 'https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Манты с Мясом', uz: 'Go\'shtli Manti' },
+                desc: { ru: 'Сочные тонкие манты ручной лепки с рубленым мясом ягненка и луком.', uz: 'To\'g\'ralgan qo\'y go\'shti va piyoz bilan tayyorlangan sersuv manti.' }
+            },
+            // ШАШЛЫКИ
+            {
+                id: 5,
                 category: 'bbq',
                 popular: true,
                 price: '120,000 UZS',
@@ -1599,34 +1610,91 @@
                 desc: { ru: 'Нежнейшая корейка на углях с маринованным луком и соусом сацебели.', uz: 'Ko\'mirda pishirilgan yumshoq qo\'zi go\'shti sacebeli sousi bilan.' }
             },
             {
-                id: 3,
-                category: 'salads',
-                popular: true,
-                price: '85,000 UZS',
-                img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Салат с Бурратой и Томатами', uz: 'Burrata va pomidorli salat' },
-                desc: { ru: 'Свежая итальянская буррата с сочными томатами и бальзамическим кремом.', uz: 'Yangi italyancha burrata pishlog\'i va xushbo\'y tasmali sous.' }
+                id: 6,
+                category: 'bbq',
+                popular: false,
+                price: '35,000 UZS',
+                img: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Шашлык Кусковой', uz: 'Tishlama Shashlik' },
+                desc: { ru: 'Сочная сочная вырезка баранины, маринованная в специях.', uz: 'Xushbo\'y ziravorlarda marinlangan sersuv qo\'y go\'shti.' }
             },
             {
-                id: 4,
-                category: 'starters',
-                popular: true,
-                price: '95,000 UZS',
-                img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Тартар из Лосося', uz: 'Losos tartari' },
-                desc: { ru: 'Свежий лосось с авокадо, каперсами и тостами из бриоши.', uz: 'Yangi losos balig\'i, avokado va brioshtostlari bilan.' }
+                id: 7,
+                category: 'bbq',
+                popular: false,
+                price: '30,000 UZS',
+                img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Шашлык Молотый (Люля)', uz: 'Qiyma Shashlik' },
+                desc: { ru: 'Традиционный фарш из телятины и баранины со специями.', uz: 'Buzoq va qo\'y go\'shti qiymasidan tayyorlangan shashlik.' }
             },
+            // СУПЫ
             {
-                id: 5,
+                id: 8,
                 category: 'soups',
                 popular: true,
-                price: '65,000 UZS',
+                price: '48,000 UZS',
                 img: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Том Ям с Морепродуктами', uz: 'Dengiz mahsulotli Tom Yam' },
-                desc: { ru: 'Пикантный тайский суп с креветками, кальмарами и грибами шиитаке.', uz: 'Krevetka va kalmarlar bilan o\'tkir tailandcha sho\'rva.' }
+                title: { ru: 'Шурпа', uz: 'Sho\'rva' },
+                desc: { ru: 'Наваристый бульон из ягненка с крупными овощами и зеленью.', uz: 'Katta sabzavotlar va ko\'katlar bilan tayyorlangan to\'yimli qo\'y go\'shti sho\'rvasi.' }
             },
             {
-                id: 6,
+                id: 9,
+                category: 'soups',
+                popular: false,
+                price: '42,000 UZS',
+                img: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Мастава', uz: 'Mastava' },
+                desc: { ru: 'Традиционный густой рис-суп с овощами и катыком.', uz: 'Sabzavotlar va qatiq bilan tayyorlangan an\'anaviy quyuq guruchli sho\'rva.' }
+            },
+            {
+                id: 10,
+                category: 'soups',
+                popular: false,
+                price: '45,000 UZS',
+                img: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Чучвара Гушт', uz: 'Chuchvara Sho\'rva' },
+                desc: { ru: 'Миниатюрные пельмени ручной лепки в прозрачном ароматном бульоне.', uz: 'Xushbo\'y sho\'rvada tayyorlangan qo\'lda tugilgan kichik chuchvaralar.' }
+            },
+            {
+                id: 11,
+                category: 'soups',
+                popular: false,
+                price: '48,000 UZS',
+                img: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Уйгурский Лагман', uz: 'Uyg\'urcha Lag\'mon' },
+                desc: { ru: 'Тянутая лапша с ароматной сай-подливой из мяса и овощей.', uz: 'Go\'sht va sabzavotli sous bilan uzun qo\'lda cho\'zilgan lag\'mon.' }
+            },
+            {
+                id: 12,
+                category: 'soups',
+                popular: false,
+                price: '40,000 UZS',
+                img: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Суп Куча', uz: 'Ko\'cha Sho\'rva' },
+                desc: { ru: 'Ароматный традиционный суп из злаков и говядины.', uz: 'Donli ekinlar va mol go\'shtidan tayyorlangan xushbo\'y an\'anaviy sho\'rva.' }
+            },
+            // САЛАТЫ И ЗАКУСКИ
+            {
+                id: 13,
+                category: 'salads',
+                popular: true,
+                price: '25,000 UZS',
+                img: 'https://images.unsplash.com/photo-1701579974271-21e330553db2?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Салат Шакароб', uz: 'Achiq-Chuchuk (Shakarob)' },
+                desc: { ru: 'Тонко нарезанные спелые томаты, лук и острый перец.', uz: 'Yupqa to\'g\'ralgan pishgan pomidor, piyoz va achchiq qalampir.' }
+            },
+            {
+                id: 14,
+                category: 'salads',
+                popular: false,
+                price: '28,000 UZS',
+                img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Салат с Сузьмой', uz: 'Suzmali Salat' },
+                desc: { ru: 'Освежающий салат из национальной сузьмы с огурцами и зеленью.', uz: 'Milliy suzma, bodring va ko\'katlardan tayyorlangan tetiklantiruvchi salat.' }
+            },
+            // ДЕСЕРТЫ
+            {
+                id: 16,
                 category: 'desserts',
                 popular: true,
                 price: '55,000 UZS',
@@ -1634,23 +1702,51 @@
                 title: { ru: 'Золотой Шоколадный Фондан', uz: 'Oltin Shokoladli Fondan' },
                 desc: { ru: 'Горячий десерт с жидким центром и шариком ванильного мороженого.', uz: 'Issiq shokoladli desert vanil muzqaymog\'i bilan.' }
             },
+            // НАПИТКИ
             {
-                id: 7,
-                category: 'mains',
-                popular: true,
-                price: '140,000 UZS',
-                img: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Филе Лосося на Гриле', uz: 'Grilda pishirilgan Losos' },
-                desc: { ru: 'Подается с спаржей под сливочно-икорным соусом.', uz: 'Sparsaz va qaymoqli ikra sousi bilan tortiladi.' }
+                id: 17,
+                category: 'drinks',
+                popular: false,
+                price: '10,000 UZS',
+                img: 'https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Вода минеральная (0.5л)', uz: 'Mineral suv (0.5l)' },
+                desc: { ru: 'Природная минеральная вода с газом или без газа.', uz: 'Gazli yoki gazsiz tabiiy mineral suv.' }
             },
             {
-                id: 8,
+                id: 18,
+                category: 'drinks',
+                popular: false,
+                price: '18,000 UZS',
+                img: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Coca-Cola / Fanta (0.5л)', uz: 'Coca-Cola / Fanta (0.5l)' },
+                desc: { ru: 'Классические прохладительные напитки.', uz: 'Klassik salqinlashtiruvchi ichimliklar.' }
+            },
+            {
+                id: 19,
+                category: 'drinks',
+                popular: false,
+                price: '25,000 UZS',
+                img: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Эспрессо / Капучино', uz: 'Espresso / Kapuchino' },
+                desc: { ru: 'Ароматный свежесваренный кофе из зерна премиум обжарки.', uz: 'Xushbo\'y yangi damlangan premium kofe.' }
+            },
+            {
+                id: 20,
+                category: 'drinks',
+                popular: false,
+                price: '15,000 UZS',
+                img: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Чай Черный / Зеленый', uz: 'Qora / Ko\'k Choy' },
+                desc: { ru: 'Традиционный чайник элитного листового чая.', uz: 'Sara bargli choydan tayyorlangan an\'anaviy choynak choy.' }
+            },
+            {
+                id: 21,
                 category: 'drinks',
                 popular: true,
-                price: '45,000 UZS',
-                img: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Авторский Лимонад SHARQ', uz: 'SHARQ Mualliflik limonadi' },
-                desc: { ru: 'Освежающий микс из маракуйи, цитрусов и сусального золота.', uz: 'Marakuya va sitrus mevalaridan tayyorlangan tetiklantiruvchi ichimlik.' }
+                price: '22,000 UZS',
+                img: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=600&q=80',
+                title: { ru: 'Травяной микс чай', uz: 'Giyohli Miks Choy' },
+                desc: { ru: 'Сбор горных трав с мятой, чабрецом и лимоном.', uz: 'Yalpiz, tog\' jambil va limonli tog\' giyohlari to\'plami.' }
             }
         ];
 
@@ -1673,17 +1769,17 @@
             {
                 name: "Тимур Алиев",
                 stars: 5,
-                text: { ru: "Восхитительное место! Подача стейка была настоящим шоу, а атмосфера идеально подходит для деловых ужинов.", uz: "Ajoyib maskan! Steyk tortilishi haqiqiy shou bo'ldi, muhit esa biznes kechki ovqatlar uchun juda mos." }
+                text: { ru: "Восхитительное место! Подача плова была потрясающей, а атмосфера идеально подходит для семейных вечеров.", uz: "Ajoyib maskan! Palov tortilishi juda go'zal bo'ldi, muhit esa oilaviy kechalar uchun juda mos." }
             },
             {
                 name: "Елена Смирнова",
                 stars: 5,
-                text: { ru: "Лучший тар-тар в городе и потрясающий сервис. Официанты предупредительны и вежливы.", uz: "Shahardagi eng yaxshi tar-tar va a'lo darajadagi servis. Offitsiantlar juda hushmuomala." }
+                text: { ru: "Лучший лагман и шурпа в Фергане! Отличный сервис, официанты предупредительны и вежливы.", uz: "Farg'onadagi eng yaxshi lag'mon va sho'rva! A'lo darajadagi servis, xizmatchilar juda hushmuomala." }
             },
             {
                 name: "Jasur Rahimov",
                 stars: 5,
-                text: { ru: "Организвывали здесь юбилей. Гости остались в полном восторге от живой музыки и десертов!", uz: "Bu yerda yubileyni nishonladik. Mehmonlar jonli muzyka va desertlardan juda mamnun bo'lishdi!" }
+                text: { ru: "Организовывали здесь мероприятие. Гости остались в полном восторге от шашлыков и травяного чая!", uz: "Bu yerda marosim o'tkazdik. Mehmonlar shashlik va giyohli choydan juda mamnun bo'lishdi!" }
             }
         ];
 
@@ -1751,7 +1847,8 @@
         // === RENDER POPULAR DISHES ===
         function renderPopularDishes() {
             const container = document.getElementById('popular-dishes-grid');
-            container.innerHTML = dishesData.map(dish => `
+            const popularDishes = dishesData.filter(d => d.popular).slice(0, 8);
+            container.innerHTML = popularDishes.map(dish => `
                 <div class="dish-card">
                     <div class="dish-img-wrapper">
                         <img src="${dish.img}" alt="${dish.title[currentLang]}" loading="lazy">
