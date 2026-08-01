@@ -1560,7 +1560,7 @@
             }
         };
 
-        // === DATA: DISHES & MENU ===
+        // === ДАННЫЕ О БЛЮДАХ И МЕНЮ ===
         const dishesData = [
             // ПОПУЛЯРНЫЕ И ГОРЯЧИЕ БЛЮДА
             {
@@ -1570,16 +1570,7 @@
                 price: '65,000 UZS',
                 img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80',
                 title: { ru: 'Плов Ферганский', uz: 'Farg\'ona Oshi' },
-                desc: { ru: 'Традиционный ферганский плов из девзиры с отборной бараниной и специями.', uz: 'Tanlangan qo\'y go\'shti va devzira guruchidan tayyorlangan an\'anaviy palov.' }
-            },
-            {
-                id: 2,
-                category: 'mains',
-                popular: true,
-                price: '180,000 UZS',
-                img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Стейк Рибай Премиум', uz: 'Ribay Premium Steyk' },
-                desc: { ru: 'Мраморная говядина зернового откорма с соусом демиглас и печеным чесноком.', uz: 'Marmar mol go\'shti, demiglas sousi va pishirilgan sarimsoq bilan.' }
+                desc: { ru: 'Традиционный ферганский плов из девзиры с отборной бараниной.', uz: 'Tanlangan qo\'y go\'shti va devzira guruchidan tayyorlangan palov.' }
             },
             {
                 id: 3,
@@ -1588,7 +1579,7 @@
                 price: '58,000 UZS',
                 img: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=600&q=80',
                 title: { ru: 'Жареный Лагман', uz: 'Qovurma Lag\'mon' },
-                desc: { ru: 'Тянутая вручную длинная лапша, обжаренная с телятиной, овощами и восточными специями.', uz: 'Buzoq go\'shti va sabzavotlar bilan qovurilgan qo\'lda cho\'zilgan uzun lag\'mon.' }
+                desc: { ru: 'Тянутая вручную длинная лапша, обжаренная с телятиной и овощами.', uz: 'Buzoq go\'shti va sabzavotlar bilan qovurilgan uzun lag\'mon.' }
             },
             {
                 id: 4,
@@ -1597,7 +1588,7 @@
                 price: '50,000 UZS',
                 img: 'https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?auto=format&fit=crop&w=600&q=80',
                 title: { ru: 'Манты с Мясом', uz: 'Go\'shtli Manti' },
-                desc: { ru: 'Сочные тонкие манты ручной лепки с рубленым мясом ягненка и луком.', uz: 'To\'g\'ralgan qo\'y go\'shti va piyoz bilan tayyorlangan sersuv manti.' }
+                desc: { ru: 'Сочные тонкие манты ручной лепки с рубленым мясом.', uz: 'To\'g\'ralgan qo\'y go\'shti va piyoz bilan tayyorlangan sersuv manti.' }
             },
             // ШАШЛЫКИ
             {
@@ -1607,7 +1598,7 @@
                 price: '120,000 UZS',
                 img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80',
                 title: { ru: 'Шашлык из Корейки Ягненка', uz: 'Qo\'zi go\'shtidan shashlik' },
-                desc: { ru: 'Нежнейшая корейка на углях с маринованным луком и соусом сацебели.', uz: 'Ko\'mirda pishirilgan yumshoq qo\'zi go\'shti sacebeli sousi bilan.' }
+                desc: { ru: 'Нежнейшая корейка на углях с маринованным луком.', uz: 'Ko\'mirda pishirilgan yumshoq qo\'zi go\'shti.' }
             },
             {
                 id: 6,
@@ -1635,16 +1626,16 @@
                 price: '48,000 UZS',
                 img: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80',
                 title: { ru: 'Шурпа', uz: 'Sho\'rva' },
-                desc: { ru: 'Наваристый бульон из ягненка с крупными овощами и зеленью.', uz: 'Katta sabzavotlar va ko\'katlar bilan tayyorlangan to\'yimli qo\'y go\'shti sho\'rvasi.' }
+                desc: { ru: 'Наваристый бульон из ягненка с крупными овощами и зеленью.', uz: 'Katta sabzavotlar va ko\'katlar bilan tayyorlangan qo\'y go\'shti sho\'rvasi.' }
             },
             {
                 id: 9,
                 category: 'soups',
                 popular: false,
                 price: '42,000 UZS',
-                img: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80',
+                img: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80', // Рисовый густой суп (Мастава)
                 title: { ru: 'Мастава', uz: 'Mastava' },
-                desc: { ru: 'Традиционный густой рис-суп с овощами и катыком.', uz: 'Sabzavotlar va qatiq bilan tayyorlangan an\'anaviy quyuq guruchli sho\'rva.' }
+                desc: { ru: 'Традиционный густой суп из риса, овощей и нежного мяса.', uz: 'Guruch, sabzavotlar va go\'shtdan tayyorlangan an\'anaviy quyuq sho\'rva.' }
             },
             {
                 id: 10,
@@ -1660,49 +1651,48 @@
                 category: 'soups',
                 popular: false,
                 price: '48,000 UZS',
-                img: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80',
+                img: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80', // Длинная лапша с бульоном и мясом (Уйгурский лагман)
                 title: { ru: 'Уйгурский Лагман', uz: 'Uyg\'urcha Lag\'mon' },
-                desc: { ru: 'Тянутая лапша с ароматной сай-подливой из мяса и овощей.', uz: 'Go\'sht va sabzavotli sous bilan uzun qo\'lda cho\'zilgan lag\'mon.' }
+                desc: { ru: 'Тянутая длинная лапша с сочным густым соусом сай из телятины.', uz: 'Buzoq go\'shti va sabzavotli sersuv say sousi bilan uzun cho\'zilgan lag\'mon.' }
             },
             {
                 id: 12,
                 category: 'soups',
                 popular: false,
                 price: '40,000 UZS',
-                img: 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80',
+                img: 'https://images.unsplash.com/photo-1548943487-a2e4e43b4850?auto=format&fit=crop&w=600&q=80', // Восточный суп Куча
                 title: { ru: 'Суп Куча', uz: 'Ko\'cha Sho\'rva' },
-                desc: { ru: 'Ароматный традиционный суп из злаков и говядины.', uz: 'Donli ekinlar va mol go\'shtidan tayyorlangan xushbo\'y an\'anaviy sho\'rva.' }
+                desc: { ru: 'Ароматный традиционный суп из отборной говядины и бульона.', uz: 'Tanlangan mol go\'shtidan tayyorlangan xushbo\'y an\'anaviy sho\'rva.' }
             },
-            // САЛАТЫ И ЗАКУСКИ
+            // САЛАТЫ (Используются загруженные вами фотографии)
             {
                 id: 13,
                 category: 'salads',
                 popular: true,
                 price: '25,000 UZS',
-                img: 'https://images.unsplash.com/photo-1701579974271-21e330553db2?auto=format&fit=crop&w=600&q=80',
+                img: 'salat-shakarob_1781931091_1_vu30504_max.jpg', // Фото шакароба (помидоры, лук)
                 title: { ru: 'Салат Шакароб', uz: 'Achiq-Chuchuk (Shakarob)' },
-                desc: { ru: 'Тонко нарезанные спелые томаты, лук и острый перец.', uz: 'Yupqa to\'g\'ralgan pishgan pomidor, piyoz va achchiq qalampir.' }
+                desc: { ru: 'Тонко нарезанные спелые томаты, лук и свежая зелень.', uz: 'Yupqa to\'g\'ralgan pishgan pomidor, piyoz va yangi ko\'katlar.' }
             },
             {
                 id: 14,
                 category: 'salads',
                 popular: false,
                 price: '28,000 UZS',
-                img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80',
+                img: 'suzma-salat-3.jpg', // Фото салата с сузьмой (сузьма, огурцы, зелень)
                 title: { ru: 'Салат с Сузьмой', uz: 'Suzmali Salat' },
-                desc: { ru: 'Освежающий салат из национальной сузьмы с огурцами и зеленью.', uz: 'Milliy suzma, bodring va ko\'katlardan tayyorlangan tetiklantiruvchi salat.' }
+                desc: { ru: 'Освежающий салат из национальной сузьмы с зеленью.', uz: 'Milliy suzma va ko\'katlardan tayyorlangan tetiklantiruvchi salat.' }
             },
-            // ДЕСЕРТЫ
+            // ДЕСЕРТЫ И НАПИТКИ
             {
                 id: 16,
                 category: 'desserts',
                 popular: true,
                 price: '55,000 UZS',
                 img: 'https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Золотой Шоколадный Фондан', uz: 'Oltin Shokoladli Fondan' },
-                desc: { ru: 'Горячий десерт с жидким центром и шариком ванильного мороженого.', uz: 'Issiq shokoladli desert vanil muzqaymog\'i bilan.' }
+                title: { ru: 'Шоколадный Фондан', uz: 'Shokoladli Fondan' },
+                desc: { ru: 'Горячий десерт с жидким центром и шариком мороженого.', uz: 'Issiq shokoladli desert vanil muzqaymog\'i bilan.' }
             },
-            // НАПИТКИ
             {
                 id: 17,
                 category: 'drinks',
