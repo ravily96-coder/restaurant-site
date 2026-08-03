@@ -250,7 +250,7 @@
             cursor: pointer;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             font-size: 0.85rem;
         }
 
@@ -342,16 +342,7 @@
             border-radius: 8px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.5);
             border: 1px solid var(--border-color);
-        }
-
-        .about-img-sub {
-            position: absolute;
-            bottom: -30px;
-            right: -30px;
-            width: 55%;
-            border-radius: 8px;
-            border: 4px solid var(--primary-green);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            width: 100%;
         }
 
         .about-text p {
@@ -1035,7 +1026,6 @@
         @media (max-width: 992px) {
             .hero-title { font-size: 3.2rem; }
             .about-grid, .contacts-grid { grid-template-columns: 1fr; gap: 40px; }
-            .about-img-sub { display: none; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
         }
 
@@ -1099,12 +1089,14 @@
             </ul>
 
             <div class="header-actions">
-                <!-- Language Switcher -->
+                <!-- Language Switcher (RU / UZ / EN) -->
                 <div class="lang-switcher">
                     <i class="fa-solid fa-globe gold-text"></i>
                     <button class="lang-btn active" onclick="setLanguage('ru', this)">RU</button>
                     <span>|</span>
                     <button class="lang-btn" onclick="setLanguage('uz', this)">UZ</button>
+                    <span>|</span>
+                    <button class="lang-btn" onclick="setLanguage('en', this)">EN</button>
                 </div>
 
                 <a href="#booking" class="btn btn-outline" style="padding: 8px 18px; font-size: 0.8rem;" data-i18n="btn_book_table">Забронировать</a>
@@ -1129,13 +1121,12 @@
         </div>
     </section>
 
-    <!-- === ABOUT SECTION === -->
+    <!-- === ABOUT SECTION (Обновлено: оставлена одна главная фотография) === -->
     <section id="about" class="section-padding">
         <div class="container">
             <div class="about-grid">
                 <div class="about-img-stack fade-in-up">
                     <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Интерьер ресторана" class="about-img-main" loading="lazy">
-                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80" alt="Шеф повар" class="about-img-sub" loading="lazy">
                 </div>
                 <div class="about-text fade-in-up">
                     <p class="section-subtitle" data-i18n="about_subtitle">О нашей концепции</p>
@@ -1410,7 +1401,7 @@
 
     <!-- === JAVASCRIPT LOGIC & DICTIONARY === -->
     <script>
-        // === TRANSLATIONS DICTIONARY ===
+        // === TRANSLATIONS DICTIONARY (RU, UZ, EN) ===
         const translations = {
             ru: {
                 nav_home: "Главная",
@@ -1557,6 +1548,79 @@
                 f_privacy: "Maxfiylik siyosati",
                 f_rights: "Barcha huquqlar himoyalangan.",
                 btn_order: "Buyurtma berish"
+            },
+            en: {
+                nav_home: "Home",
+                nav_about: "About Us",
+                nav_dishes: "Popular",
+                nav_menu: "Menu",
+                nav_gallery: "Gallery",
+                nav_reviews: "Reviews",
+                nav_contacts: "Contacts",
+                nav_booking: "Booking",
+                btn_book_table: "Book a Table",
+                btn_view_menu: "View Menu",
+                hero_subtitle: "Fine Dining Premium Restaurant",
+                hero_title: "Art of Taste & Luxury Atmosphere",
+                hero_desc: "Immerse yourself in a symphony of author's dishes, exquisitely prepared with love by the world's best chefs.",
+                about_subtitle: "Our Concept",
+                about_title: "Perfection in Every Detail",
+                about_p1: "SHARQ Restaurant is a unique place where traditional classic and oriental cuisine harmoniously blend with modern gastronomic trends.",
+                about_p2: "Our story began with a simple philosophy: taking the freshest and organic ingredients to create masterpieces that will surprise even the most sophisticated gourmets.",
+                feat_1: "Author's Cuisine",
+                feat_2: "Best Chefs",
+                feat_3: "Cozy Atmosphere",
+                feat_4: "Premium Service",
+                dishes_subtitle: "Guest Choice",
+                dishes_title: "Popular Dishes",
+                menu_subtitle: "Gastronomic Map",
+                menu_title: "Our Menu",
+                cat_all: "All",
+                cat_starters: "Starters",
+                cat_salads: "Salads",
+                cat_soups: "Soups",
+                cat_mains: "Main Courses",
+                cat_bbq: "BBQ",
+                cat_desserts: "Desserts",
+                cat_drinks: "Drinks",
+                gallery_subtitle: "Visual Aesthetic",
+                gallery_title: "Restaurant Gallery",
+                why_subtitle: "Our Advantages",
+                why_title: "Why Choose Us",
+                why_1_title: "Natural Products",
+                why_1_desc: "We use exclusively fresh and organic farm products of the highest quality.",
+                why_2_title: "Fast Service",
+                why_2_desc: "Well-coordinated kitchen work guarantees flawless dish presentation without long waits.",
+                why_3_title: "Free Wi-Fi",
+                why_3_desc: "High-speed internet throughout the venue for the comfort of our guests.",
+                why_4_title: "Parking & Valet",
+                why_4_desc: "Convenient secured parking with staff parking service.",
+                reviews_subtitle: "Words of Gratitude",
+                reviews_title: "Visitor Reviews",
+                book_subtitle: "Early Reservation",
+                book_title: "Book a Table",
+                label_name: "Your Name",
+                label_phone: "Phone",
+                label_date: "Date",
+                label_time: "Time",
+                label_guests: "Number of Guests",
+                label_comment: "Special Requests",
+                btn_submit_booking: "Book Now",
+                contact_subtitle: "We Are Always Glad to See You",
+                contact_title: "Contacts",
+                c_address_t: "Address",
+                c_address_v: "Fergana city, Ferganskaya str., 62",
+                btn_route: "Get Directions →",
+                c_phone_t: "Phones",
+                c_hours_t: "Working Hours",
+                c_hours_v: "Daily: from 12:00 to 23:00",
+                c_email_t: "Email",
+                footer_about: "A high-level restaurant offering unforgettable gastronomic experiences and true hospitality.",
+                f_nav: "Navigation",
+                f_info: "Information",
+                f_privacy: "Privacy Policy",
+                f_rights: "All rights reserved.",
+                btn_order: "Order"
             }
         };
 
@@ -1569,28 +1633,26 @@
                 popular: true,
                 price: '65,000 UZS',
                 img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Плов Ферганский', uz: 'Farg\'ona Oshi' },
-                desc: { ru: 'Традиционный ферганский плов из девзиры с отборной бараниной.', uz: 'Tanlangan qo\'y go\'shti va devzira guruchidan tayyorlangan palov.' }
+                title: { ru: 'Плов Ферганский', uz: 'Farg\'ona Oshi', en: 'Fergana Plov' },
+                desc: { ru: 'Традиционный ферганский плов из девзиры с отборной бараниной.', uz: 'Tanlangan qo\'y go\'shti va devzira guruchidan tayyorlangan palov.', en: 'Traditional Fergana plov made from devzira rice with selected lamb.' }
             },
             {
                 id: 3,
                 category: 'mains',
                 popular: true,
                 price: '58,000 UZS',
-                // Обновлено по вашей ссылке
                 img: 'https://avatars.mds.yandex.net/i?id=ad4af84898da911c3b717516c4749254a97f3b4a-5227308-images-thumbs&n=13',
-                title: { ru: 'Жареный Лагман', uz: 'Qovurma Lag\'mon' },
-                desc: { ru: 'Тянутая вручную длинная лапша, обжаренная с телятиной и овощами.', uz: 'Buzoq go\'shti va sabzavotlar bilan qovurilgan uzun lag\'mon.' }
+                title: { ru: 'Жареный Лагман', uz: 'Qovurma Lag\'mon', en: 'Fried Lagman' },
+                desc: { ru: 'Тянутая вручную длинная лапша, обжаренная с телятиной и овощами.', uz: 'Buzoq go\'shti va sabzavotlar bilan qovurilgan uzun lag\'mon.', en: 'Hand-pulled long noodles fried with veal and vegetables.' }
             },
             {
                 id: 4,
                 category: 'mains',
                 popular: true,
                 price: '50,000 UZS',
-                // Обновлено по вашей ссылке
                 img: 'https://avatars.mds.yandex.net/i?id=d22dbe35f194d5dd5ce9d97585ede59c9a1e8a86-4451190-images-thumbs&n=13',
-                title: { ru: 'Манты с Мясом', uz: 'Go\'shtli Manti' },
-                desc: { ru: 'Сочные тонкие манты ручной лепки с рубленым мясом.', uz: 'To\'g\'ralgan qo\'y go\'shti va piyoz bilan tayyorlangan sersuv manti.' }
+                title: { ru: 'Манты с Мясом', uz: 'Go\'shtli Manti', en: 'Meat Manti' },
+                desc: { ru: 'Сочные тонкие манты ручной лепки с рубленым мясом.', uz: 'To\'g\'ralgan qo\'y go\'shti va piyoz bilan tayyorlangan sersuv manti.', en: 'Juicy thin hand-wrapped dumplings with chopped meat.' }
             },
             // ШАШЛЫКИ
             {
@@ -1599,28 +1661,26 @@
                 popular: true,
                 price: '120,000 UZS',
                 img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Шашлык из Корейки Ягненка', uz: 'Qo\'zi go\'shtidan shashlik' },
-                desc: { ru: 'Нежнейшая корейка на углях с маринованным луком.', uz: 'Ko\'mirda pishirilgan yumshoq qo\'zi go\'shti.' }
+                title: { ru: 'Шашлык из Корейки Ягненка', uz: 'Qo\'zi go\'shtidan shashlik', en: 'Lamb Rib BBQ' },
+                desc: { ru: 'Нежнейшая корейка на углях с маринованным луком.', uz: 'Ko\'mirda pishirilgan yumshoq qo\'zi go\'shti.', en: 'Tender charcoal-grilled lamb ribs with marinated onion.' }
             },
             {
                 id: 6,
                 category: 'bbq',
                 popular: false,
                 price: '35,000 UZS',
-                // Обновлено по вашей ссылке
                 img: 'https://avatars.mds.yandex.net/i?id=4dd6c4779d90db8f34373000d7488ccb1f5f85a0-5906397-images-thumbs&n=13',
-                title: { ru: 'Шашлык Кусковой', uz: 'Tishlama Shashlik' },
-                desc: { ru: 'Сочная вырезка баранины, маринованная в специях.', uz: 'Xushbo\'y ziravorlarda marinlangan sersuv qo\'y go\'shti.' }
+                title: { ru: 'Шашлык Кусковой', uz: 'Tishlama Shashlik', en: 'Shish Kebab (Chunks)' },
+                desc: { ru: 'Сочная вырезка баранины, маринованная в специях.', uz: 'Xushbo\'y ziravorlarda marinlangan sersuv qo\'y go\'shti.', en: 'Juicy lamb tenderloin marinated in spices.' }
             },
             {
                 id: 7,
                 category: 'bbq',
                 popular: false,
                 price: '30,000 UZS',
-                // Обновлено по вашей ссылке
                 img: 'https://avatars.mds.yandex.net/i?id=e45c2750fd631d230ee9c365f5a1cea3b698107b-10085718-images-thumbs&n=13',
-                title: { ru: 'Шашлык Молотый (Люля)', uz: 'Qiyma Shashlik' },
-                desc: { ru: 'Традиционный фарш из телятины и баранины со специями.', uz: 'Buzoq va qo\'y go\'shti qiymasidan tayyorlangan shashlik.' }
+                title: { ru: 'Шашлык Молотый (Люля)', uz: 'Qiyma Shashlik', en: 'Lula Kebab' },
+                desc: { ru: 'Традиционный фарш из телятины и баранины со специями.', uz: 'Buzoq va qo\'y go\'shti qiymasidan tayyorlangan shashlik.', en: 'Traditional minced veal and lamb kebab with spices.' }
             },
             // СУПЫ
             {
@@ -1629,8 +1689,8 @@
                 popular: true,
                 price: '48,000 UZS',
                 img: 'https://avatars.mds.yandex.net/i?id=196be34b4b72a6528084bfafaded7be36e97e2ab-16395638-images-thumbs&n=13',
-                title: { ru: 'Шурпа', uz: 'Sho\'rva' },
-                desc: { ru: 'Наваристый бульон из ягненка с крупными овощами и зеленью.', uz: 'Katta sabzavotlar va ko\'katlar bilan tayyorlangan qo\'y go\'shti sho\'rvasi.' }
+                title: { ru: 'Шурпа', uz: 'Sho\'rva', en: 'Shurpa Soup' },
+                desc: { ru: 'Наваристый бульон из ягненка с крупными овощами и зеленью.', uz: 'Katta sabzavotlar va ko\'katlar bilan tayyorlangan qo\'y go\'shti sho\'rvasi.', en: 'Rich lamb broth with chunky vegetables and herbs.' }
             },
             {
                 id: 9,
@@ -1638,8 +1698,8 @@
                 popular: false,
                 price: '42,000 UZS',
                 img: 'https://avatars.mds.yandex.net/i?id=0b29bf1a2c40c7fad75930c86d7f3df4200738e9-4815706-images-thumbs&n=13',
-                title: { ru: 'Мастава', uz: 'Mastava' },
-                desc: { ru: 'Традиционный густой суп из риса, овощей и нежного мяса.', uz: 'Guruch, sabzavotlar va go\'shtdan tayyorlangan an\'anaviy quyuq sho\'rva.' }
+                title: { ru: 'Мастава', uz: 'Mastava', en: 'Mastava Soup' },
+                desc: { ru: 'Традиционный густой суп из риса, овощей и нежного мяса.', uz: 'Guruch, sabzavotlar va go\'shtdan tayyorlangan an\'anaviy quyuq sho\'rva.', en: 'Traditional thick soup made with rice, vegetables, and tender meat.' }
             },
             {
                 id: 10,
@@ -1647,8 +1707,8 @@
                 popular: false,
                 price: '45,000 UZS',
                 img: 'https://avatars.mds.yandex.net/i?id=dd06d74dce29ba282c1a6d0166b1ef675f111f29-4217228-images-thumbs&n=13',
-                title: { ru: 'Чучвара Гушт', uz: 'Chuchvara Sho\'rva' },
-                desc: { ru: 'Миниатюрные пельмени ручной лепки в прозрачном ароматном бульоне.', uz: 'Xushbo\'y sho\'rvada tayyorlangan qo\'lda tugilgan kichik chuchvaralar.' }
+                title: { ru: 'Чучвара Гушт', uz: 'Chuchvara Sho\'rva', en: 'Chuchvara Soup' },
+                desc: { ru: 'Миниатюрные пельмени ручной лепки в прозрачном ароматном бульоне.', uz: 'Xushbo\'y sho\'rvada tayyorlangan qo\'lda tugilgan kichik chuchvaralar.', en: 'Miniature handmade dumplings in a clear aromatic broth.' }
             },
             {
                 id: 11,
@@ -1656,8 +1716,8 @@
                 popular: false,
                 price: '48,000 UZS',
                 img: 'https://avatars.mds.yandex.net/i?id=4ac9409478d12763eed5918f0307409a78edf736-12187916-images-thumbs&n=13',
-                title: { ru: 'Уйгурский Лагман', uz: 'Uyg\'urcha Lag\'mon' },
-                desc: { ru: 'Тянутая длинная лапша с сочным густым соусом сай из телятины.', uz: 'Buzoq go\'shti va sabzavotli sersuv say sousi bilan uzun cho\'zilgan lag\'mon.' }
+                title: { ru: 'Уйгурский Лагман', uz: 'Uyg\'urcha Lag\'mon', en: 'Uyghur Lagman' },
+                desc: { ru: 'Тянутая длинная лапша с сочным густым соусом сай из телятины.', uz: 'Buzoq go\'shti va sabzavotli sersuv say sousi bilan uzun cho\'zilgan lag\'mon.', en: 'Hand-pulled long noodles with savory thick veal and vegetable sauce.' }
             },
             {
                 id: 12,
@@ -1665,8 +1725,8 @@
                 popular: false,
                 price: '40,000 UZS',
                 img: 'https://i.ytimg.com/vi/8QmJf64stTM/hqdefault.jpg',
-                title: { ru: 'Суп Куча', uz: 'Ko\'cha Sho\'rva' },
-                desc: { ru: 'Ароматный традиционный суп из отборной говядины и злаков.', uz: 'Tanlangan mol go\'shti va donli ekinlardan tayyorlangan xushbo\'y sho\'rva.' }
+                title: { ru: 'Суп Куча', uz: 'Ko\'cha Sho\'rva', en: 'Kucha Soup' },
+                desc: { ru: 'Ароматный традиционный суп из отборной говядины и злаков.', uz: 'Tanlangan mol go\'shti va donli ekinlardan tayyorlangan xushbo\'y sho\'rva.', en: 'Fragrant traditional soup made from selected beef and grains.' }
             },
             // САЛАТЫ
             {
@@ -1675,18 +1735,17 @@
                 popular: true,
                 price: '25,000 UZS',
                 img: 'https://avatars.mds.yandex.net/i?id=f510b3f599cdf637bbe2ed39ff457509877653a5-5711615-images-thumbs&n=13',
-                title: { ru: 'Салат Шакароб', uz: 'Achiq-Chuchuk (Shakarob)' },
-                desc: { ru: 'Тонко нарезанные спелые томаты, лук и свежая зелень.', uz: 'Yupqa to\'g\'ralgan pishgan pomidor, piyoz va yangi ko\'katlar.' }
+                title: { ru: 'Салат Шакароб', uz: 'Achiq-Chuchuk (Shakarob)', en: 'Shakarob Salad' },
+                desc: { ru: 'Тонко нарезанные спелые томаты, лук и свежая зелень.', uz: 'Yupqa to\'g\'ralgan pishgan pomidor, piyoz va yangi ko\'katlar.', en: 'Finely sliced ripe tomatoes, onions, and fresh herbs.' }
             },
             {
                 id: 14,
                 category: 'salads',
                 popular: false,
                 price: '28,000 UZS',
-                // Обновлено по вашей ссылке
                 img: 'https://avatars.mds.yandex.net/i?id=1ed558d099345690a8906aa54ac1617140e515d4-2417438-images-thumbs&n=13',
-                title: { ru: 'Салат с Сузьмой', uz: 'Suzmali Salat' },
-                desc: { ru: 'Освежающий салат из национальной сузьмы с зеленью.', uz: 'Milliy suzma va ko\'katlardan tayyorlangan tetiklantiruvchi salat.' }
+                title: { ru: 'Салат с Сузьмой', uz: 'Suzmali Salat', en: 'Suzma Salad' },
+                desc: { ru: 'Освежающий салат из национальной сузьмы с зеленью.', uz: 'Milliy suzma va ko\'katlardan tayyorlangan tetiklantiruvchi salat.', en: 'Refreshing salad made from national suzma yogurt cheese with herbs.' }
             },
             // ДЕСЕРТЫ И НАПИТКИ
             {
@@ -1695,28 +1754,26 @@
                 popular: true,
                 price: '55,000 UZS',
                 img: 'https://images.unsplash.com/photo-1579372786545-d24232daf58c?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Шоколадный Фондан', uz: 'Shokoladli Fondan' },
-                desc: { ru: 'Горячий десерт с жидким центром и шариком мороженого.', uz: 'Issiq shokoladli desert vanil muzqaymog\'i bilan.' }
+                title: { ru: 'Шоколадный Фондан', uz: 'Shokoladli Fondan', en: 'Chocolate Fondant' },
+                desc: { ru: 'Горячий десерт с жидким центром и шариком мороженого.', uz: 'Issiq shokoladli desert vanil muzqaymog\'i bilan.', en: 'Warm dessert with a molten center and a scoop of ice cream.' }
             },
             {
                 id: 17,
                 category: 'drinks',
                 popular: false,
                 price: '10,000 UZS',
-                // Обновлено: Минеральная вода по вашей ссылке
                 img: 'https://avatars.mds.yandex.net/i?id=755a88af49e4900dbd05fb41b245b05f8ef23980-5233353-images-thumbs&n=13',
-                title: { ru: 'Вода минеральная (0.5л)', uz: 'Mineral suv (0.5l)' },
-                desc: { ru: 'Природная минеральная вода с газом или без газа.', uz: 'Gazli yoki gazsiz tabiiy mineral suv.' }
+                title: { ru: 'Вода минеральная (0.5л)', uz: 'Mineral suv (0.5l)', en: 'Mineral Water (0.5L)' },
+                desc: { ru: 'Природная минеральная вода с газом или без газа.', uz: 'Gazli yoki gazsiz tabiiy mineral suv.', en: 'Natural mineral water, sparkling or still.' }
             },
             {
                 id: 18,
                 category: 'drinks',
                 popular: false,
                 price: '18,000 UZS',
-                // Обновлено: Кола и фанта по вашей ссылке
                 img: 'https://avatars.mds.yandex.net/i?id=c988e4e735eeec3b97091eff4f85e162b91ca3bb-8567811-images-thumbs&n=13',
-                title: { ru: 'Coca-Cola / Fanta (0.5л)', uz: 'Coca-Cola / Fanta (0.5l)' },
-                desc: { ru: 'Классические прохладительные напитки.', uz: 'Klassik salqinlashtiruvchi ichimliklar.' }
+                title: { ru: 'Coca-Cola / Fanta (0.5л)', uz: 'Coca-Cola / Fanta (0.5l)', en: 'Coca-Cola / Fanta (0.5L)' },
+                desc: { ru: 'Классические прохладительные напитки.', uz: 'Klassik salqinlashtiruvchi ichimliklar.', en: 'Classic refreshing soft drinks.' }
             },
             {
                 id: 19,
@@ -1724,8 +1781,8 @@
                 popular: false,
                 price: '25,000 UZS',
                 img: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Эспрессо / Капучино', uz: 'Espresso / Kapuchino' },
-                desc: { ru: 'Ароматный свежесваренный кофе из зерна премиум обжарки.', uz: 'Xushbo\'y yangi damlangan premium kofe.' }
+                title: { ru: 'Эспрессо / Капучино', uz: 'Espresso / Kapuchino', en: 'Espresso / Cappuccino' },
+                desc: { ru: 'Ароматный свежесваренный кофе из зерна премиум обжарки.', uz: 'Xushbo\'y yangi damlangan premium kofe.', en: 'Fragrant freshly brewed premium roasted coffee.' }
             },
             {
                 id: 20,
@@ -1733,8 +1790,8 @@
                 popular: false,
                 price: '15,000 UZS',
                 img: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Чай Черный / Зеленый', uz: 'Qora / Ko\'k Choy' },
-                desc: { ru: 'Традиционный чайник элитного листового чая.', uz: 'Sara bargli choydan tayyorlangan an\'anaviy choynak choy.' }
+                title: { ru: 'Чай Черный / Зеленый', uz: 'Qora / Ko\'k Choy', en: 'Black / Green Tea' },
+                desc: { ru: 'Традиционный чайник элитного листового чая.', uz: 'Sara bargli choydan tayyorlangan an\'anaviy choynak choy.', en: 'Traditional pot of elite loose leaf tea.' }
             },
             {
                 id: 21,
@@ -1742,20 +1799,16 @@
                 popular: true,
                 price: '22,000 UZS',
                 img: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=600&q=80',
-                title: { ru: 'Травяной микс чай', uz: 'Giyohli Miks Choy' },
-                desc: { ru: 'Сбор горных трав с мятой, чабрецом и лимоном.', uz: 'Yalpiz, tog\' jambil va limonli tog\' giyohlari to\'plami.' }
+                title: { ru: 'Травяной микс чай', uz: 'Giyohli Miks Choy', en: 'Herbal Mix Tea' },
+                desc: { ru: 'Сбор горных трав с мятой, чабрецом и лимоном.', uz: 'Yalpiz, tog\' jambil va limonli tog\' giyohlari to\'plami.', en: 'Mountain herb blend with mint, thyme, and lemon.' }
             }
         ];
 
         const galleryImages = [
-            'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=600&q=80',
-            'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80',
-            'https://images.unsplash.com/photo-1578474846511-04ba529f0b88?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80',
-            'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80',
@@ -1766,17 +1819,29 @@
             {
                 name: "Тимур Алиев",
                 stars: 5,
-                text: { ru: "Восхитительное место! Подача плова была потрясающей, а атмосфера идеально подходит для семейных вечеров.", uz: "Ajoyib maskan! Palov tortilishi juda go'zal bo'ldi, muhit esa oilaviy kechalar uchun juda mos." }
+                text: { 
+                    ru: "Восхитительное место! Подача плова была потрясающей, а атмосфера идеально подходит для семейных вечеров.", 
+                    uz: "Ajoyib maskan! Palov tortilishi juda go'zal bo'ldi, muhit esa oilaviy kechalar uchun juda mos.",
+                    en: "Wonderful place! The presentation of plov was amazing, and the atmosphere is perfect for family evenings."
+                }
             },
             {
                 name: "Елена Смирнова",
                 stars: 5,
-                text: { ru: "Лучший лагман и шурпа в Фергане! Отличный сервис, официанты предупредительны и вежливы.", uz: "Farg'onadagi eng yaxshi lag'mon va sho'rva! A'lo darajadagi servis, xizmatchilar juda hushmuomala." }
+                text: { 
+                    ru: "Лучший лагман и шурпа в Фергане! Отличный сервис, официанты предупредительны и вежливы.", 
+                    uz: "Farg'onadagi eng yaxshi lag'mon va sho'rva! A'lo darajadagi servis, xizmatchilar juda hushmuomala.",
+                    en: "The best lagman and shurpa in Fergana! Excellent service, waiters are attentive and polite."
+                }
             },
             {
                 name: "Jasur Rahimov",
                 stars: 5,
-                text: { ru: "Организовывали здесь мероприятие. Гости остались в полном восторге от шашлыков и травяного чая!", uz: "Bu yerda marosim o'tkazdik. Mehmonlar shashlik va giyohli choydan juda mamnun bo'lishdi!" }
+                text: { 
+                    ru: "Организовывали здесь мероприятие. Гости остались в полном восторге от шашлыков и травяного чая!", 
+                    uz: "Bu yerda marosim o'tkazdik. Mehmonlar shashlik va giyohli choydan juda mamnun bo'lishdi!",
+                    en: "We organized an event here. Guests were absolutely delighted with the BBQ and herbal tea!"
+                }
             }
         ];
 
@@ -1943,7 +2008,9 @@
             e.preventDefault();
             const msg = currentLang === 'ru' 
                 ? "Спасибо! Ваш столик успешно забронирован. Менеджер свяжется с вами в ближайшее время." 
-                : "Rahmat! Stol muvaffaqiyatli band qilindi. Menejer tez orada siz bilan bog'lanadi.";
+                : currentLang === 'uz' 
+                ? "Rahmat! Stol muvaffaqiyatli band qilindi. Menejer tez orada siz bilan bog'lanadi."
+                : "Thank you! Your table has been successfully booked. Our manager will contact you soon.";
             showToast(msg);
             e.target.reset();
         }
